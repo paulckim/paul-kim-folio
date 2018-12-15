@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './styles.css';
 
 class Parallax extends Component {
   componentDidMount() {
@@ -14,11 +15,12 @@ class Parallax extends Component {
 
   render() {
     return (
-      <div className="parallax-container">
-        <div className="parallax"><img src={this.props.img} alt='' /></div>
+      <div className='parallax-container'>
+        <div className='parallax'><img src={this.props.img} alt='' /></div>
       </div>
     );
   }
 }
 
 export default Parallax;
+

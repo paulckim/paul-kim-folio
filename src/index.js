@@ -1,8 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
 import '../node_modules/materialize-css/dist/css/materialize.min.css';
 import '../node_modules/materialize-css/dist/js/materialize.min.js';
+import '../node_modules/swiper/dist/css/swiper.min.css';
+import '../node_modules/swiper/dist/js/swiper.min.js';
+
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 

@@ -1,13 +1,10 @@
 import NavBar from './NavBar';
-import Parallax from './Parallax'
-import SectionHoC from './SectionHoC';
-
+import Parallax from './Parallax';
 import AboutMe from './About';
-
-const AboutMeSection = SectionHoC(AboutMe);
 
 export {
   NavBar,
   Parallax,
-  AboutMeSection
+  AboutMe
 }
+

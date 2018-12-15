@@ -1,17 +1,18 @@
-/* .nav-position {
+.nav-position {
   position: absolute;
 }
 
 .nav-style {
-  background-color: transparent;
-  box-shadow: none;
+  background-color: #0D3E59;
+  opacity: .75;
+  transition: opacity 175ms ease;
 }
 
-.nav-logo {
-  margin-left: 1.25vw;
-  color: black !important;
+.nav-fade-in {
+  opacity: 1;
 }
 
 .nav-text {
-  color: black !important;
-} */
+  color: white;
+}
+
