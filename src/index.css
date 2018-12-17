@@ -1,17 +1,56 @@
-.main-div {
-  max-height: 100vh;
-  max-width: 100vw;
+html, body {
+  position: relative;
+  height: 100%;
   margin: 0;
-  padding: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+.swiper-container {
+  height: 100%;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.swiper-wrapper {
+  height: 100vh;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.btn {
+  float: right;
+  clear: right;
+  cursor: pointer;
+  margin-top: 6px;
+  margin-bottom: 6px;
+  display: block;
+  background: black;
+  opacity: .35;
+  border-radius: 0%;
+  width: 35px;
+  height: 9px;
+  transition-property: width;
+  transition-duration: .5s;
+}
+
+.active {
+  width: 70px;
 }
 

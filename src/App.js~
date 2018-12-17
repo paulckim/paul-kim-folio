@@ -1,0 +1,46 @@
+import React, { Component } from 'react';
+import $ from "jquery";
+import './index.css';
+
+class App extends Component {
+  componentDidMount() {
+    $("#v-slide-wrapper").slick({
+      centerMode: true,
+      slidesToShow: 1,
+      autoplay: false,
+      vertical: true,
+      verticalSwiping: true
+    });
+  }
+
+  render() {
+    return (
+      <div className="carousel carousel-slider">
+        <a className="carousel-item" href="#one!"><img src="https://lorempixel.com/800/400/food/1" alt="" /></a>
+        <a className="carousel-item" href="#two!"><img src="https://lorempixel.com/800/400/food/2" alt="" /></a>
+        <a className="carousel-item" href="#three!"><img src="https://lorempixel.com/800/400/food/3" alt="" /></a>
+        <a className="carousel-item" href="#four!"><img src="https://lorempixel.com/800/400/food/4" alt="" /></a>
+      </div>
+    );
+  }
+}
+
+export default App;
+
+
+// <div className="main-div" id="v-slide-wrapper">
+//         <div>Content 1</div>
+//         <div>Content 2</div>
+//         <div>Content 3</div>
+//       </div>
+
+
+// <div className="responsive-img image">
+//           <img src="https://newevolutiondesigns.com/images/freebies/polygon-wallpaper-7.jpg" alt="" />
+//         </div>
+//         <div>
+//           <img src="https://wallpaperaccess.com/full/692106.jpg" alt="" />
+//         </div>
+//         <div>
+//           <img src="https://www.desktopbackground.org/download/1600x900/2011/08/12/248957_polygon-wide-hd-desktop-backgrounds-wallpapers-dreamlovewallpapers_1920x1080_h.jpg" alt="" />
+//         </div>
