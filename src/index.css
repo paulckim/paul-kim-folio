@@ -1,10 +1,48 @@
 html, body {
+  background: black;
   position: relative;
   height: 100%;
   margin: 0;
 }
 
+::selection {
+  background: rgb(28, 215, 255, 0.4); /* WebKit/Blink Browsers */
+}
+::-moz-selection {
+  background: rgb(28, 215, 255, 0.4); /* Gecko Browsers */
+}
+
+.floating-nav {
+  position: relative;
+  z-index: +10;
+}
+
+.nav-dark {
+  background: transparent;
+  box-shadow: none;
+}
+
+li:hover {
+  background: rgba(0, 0, 0, 0.6);
+}
+
+
+ul.sidenav-dark {
+  background-color: transparent;
+  box-shadow: none;
+}
+
+ul.sidenav-dark li a {
+  color: white;
+}
+
+.sidenav-overlay {
+  background-color: transparent;
+  box-shadow: none;
+}
+
 .swiper-container {
+  position: absolute;
   height: 100%;
   width: 100%;
   margin-left: auto;
@@ -18,7 +56,6 @@ html, body {
 .swiper-slide {
   text-align: center;
   font-size: 18px;
-  background: #fff;
   /* Center slide text vertically */
   display: -webkit-box;
   display: -ms-flexbox;
@@ -34,23 +71,43 @@ html, body {
   align-items: center;
 }
 
-.btn {
+.faded-layer-b {
+  height: 100%;
+  width: 100%;
+  position: static;
+  background: rgb(0, 0, 0, 0.45);
+}
+
+.faded-layer-w {
+  height: 100%;
+  width: 100%;
+  position: static;
+  background: rgb(255, 255, 255, 0.1);
+}
+
+.autoscale-img {
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+.bullet {
   float: right;
   clear: right;
   cursor: pointer;
-  margin-top: 6px;
-  margin-bottom: 6px;
+  margin-top: 9px;
+  margin-bottom: 9px;
   display: block;
-  background: black;
-  opacity: .35;
+  background: white;
+  opacity: .5;
   border-radius: 0%;
   width: 35px;
-  height: 9px;
+  height: 8px;
   transition-property: width;
-  transition-duration: .5s;
+  transition-duration: .25s;
 }
 
 .active {
-  width: 70px;
+  width: 80px;
 }
 
