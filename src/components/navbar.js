@@ -26,10 +26,8 @@ function renderNavLinks(navLinks) {
 export default class NavBar extends PureComponent {
   render() {
     const { navLinks } = this.props;
-    console.log(navLinks);
     const { index, section } = navLinks[0];
     const navItems = navLinks.slice(1);
-    console.log("index of brand logo", index);
 
     return (
       <div>

@@ -38,7 +38,6 @@ class App extends PureComponent {
 
   render() {
     const { sections, navLinks } = SectionNavMapper(SectionMetaData);
-    console.log("navLinks = ", navLinks);
     return (
       <div>
 
