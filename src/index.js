@@ -1,6 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import "swiper/dist/css/swiper.min.css";
+import "swiper/dist/js/swiper.esm.bundle.js";
 import "swiper/dist/js/swiper.min.js";
 
 import "materialize-css/dist/css/materialize.min.css";

@@ -55,6 +55,10 @@ nav ul span {
     padding: 0 32px;
 }
 
+span.brand-logo {
+  cursor: pointer;
+}
+
 .sidenav-overlay {
   background-color: transparent;
   box-shadow: none;
