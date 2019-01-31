@@ -1,0 +1,27 @@
+.dark-theme .card, 
+.dark-theme .card-content, 
+.dark-theme .card-action,
+.dark-theme .chip {
+  background: rgb(0, 0, 0, 0.2);
+  color: white;
+}
+
+.about-style {
+  height: 100%;
+  width: 100%;
+}
+
+.about-card {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.about-chips > * {
+  margin-right: 1%;
+}
+
+.about-chips > .chip {
+  cursor: pointer;
+}

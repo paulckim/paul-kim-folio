@@ -1,0 +1,8 @@
+li.tab-style {
+  transition: background .3s;
+  color: white;
+}
+
+li:hover.tab-style, li.tab-active {
+  background: rgba(255, 255, 255, .1);
+}

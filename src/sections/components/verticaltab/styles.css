@@ -1,0 +1,15 @@
+.col.v-tab {
+  padding: 0;
+  margin: 0;
+}
+
+ul.v-tab-list {
+  margin-top: 0;
+  margin-bottom: 0;
+  cursor: pointer;
+  list-style-position: inside;
+}
+
+ul.v-tab-list li {
+  font-size: calc(0.75vw + 1vmin);
+}

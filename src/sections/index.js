@@ -7,7 +7,7 @@ import AboutSection from "./about";
 
 /******************** [NAV LINK CONSTANTS] ********************/
 const NAV_CONSTANTS = Object.freeze({
-  HOME: "Paul Cheor Kim",
+  HOME: "Paul 철 Kim",
   ABOUT: "About Me",
   EXPERIENCE: "Experience",
   SKILLS: "Skills",

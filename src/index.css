@@ -1,5 +1,4 @@
 html, body {
-  background: black;
   position: relative;
   height: 100%;
   margin: 0;
@@ -21,11 +20,6 @@ html, body {
   background: transparent;
   box-shadow: none;
 }
-
-li:hover {
-  background: rgba(0, 0, 0, 0.6);
-}
-
 
 ul.sidenav-dark {
   background-color: transparent;
@@ -94,7 +88,7 @@ nav ul span {
   height: 100%;
   width: 100%;
   position: static;
-  background: rgb(0, 0, 0, 0.45);
+  background: rgb(0, 0, 0, 0.4);
 }
 
 .faded-layer-w {
@@ -129,4 +123,3 @@ nav ul span {
 .active {
   width: 80px;
 }
-
