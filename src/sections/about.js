@@ -18,6 +18,7 @@ export default class AboutSection extends PureComponent {
     this.setTab = this.setTab.bind(this);
     this.isActive = this.isActive.bind(this);
     this.getTabStyle = this.getTabStyle.bind(this);
+    this.getCardStyle = this.getCardStyle.bind(this);
   }
 
   /**
@@ -45,9 +46,17 @@ export default class AboutSection extends PureComponent {
     return isActive ? "tab-active" : "";
   }
 
+  /**
+   * 
+   * @param {boolean} isActive 
+   */
+  getCardStyle(isActive) {
+    return isActive ? "active-card" : "";
+  }
+
   render() {
     return (
-      <div className="valign-wrapper about-style  dark-theme">
+      <div className="about-style  dark-theme">
         <div className="container">
           <VerticalTabWrapper>
             <VerticalTab>
@@ -68,13 +77,13 @@ export default class AboutSection extends PureComponent {
               />
             </VerticalTab>
             <VerticalTabContent>
-              <div className="card about-card">
+              <div className={`card about-card ${this.getCardStyle(this.isActive(0))}`}>
                 <div className="card-content">
                   <h3 className="center-align">About Me</h3>
                   <h5 className="center-align">Cloud | Software Engineer</h5>
                   <div className="divider" />
                   <p>
-                    I am a passionate Software Engineer that loves dabbling in all parts of the development process. From front-end to back-end and DevOps to infrastructure, I love seeing products come to life every step of the way.
+                    I am a passionate Software Engineer who loves dabbling in all parts of the development process. From front-end to back-end and DevOps to infrastructure, I love seeing products come to life every step of the way.
                   </p>
                   <p>
                     I love nerding out over proxy servers, automation, language nuances & design patterns.
@@ -85,6 +94,33 @@ export default class AboutSection extends PureComponent {
                   <div className="chip">React</div>
                   <div className="chip">NodeJs</div>
                   <div className="chip">AWS</div>
+                </div>
+              </div>
+              <div className={`card about-card ${this.getCardStyle(this.isActive(1))}`}>
+                <div className="card-content">
+                  <h3 className="center-align">Statistics</h3>
+                  <div className="divider" />
+                  <p>
+                    I love nerding out over proxy servers, automation, language nuances & design patterns.
+                  </p>
+                </div>
+              </div>
+              <div className={`card about-card ${this.getCardStyle(this.isActive(2))}`}>
+                <div className="card-content">
+                  <h3 className="center-align">Hobbies</h3>
+                  <div className="divider" />
+                  <p>
+                    I like to keep myself entertained.
+                  </p>
+                  <p>
+                    <ul>
+                      <li>Tinkering with my laptop!</li>
+                      <li>Tinkering with new tools!</li>
+                      <li>Writing tech blogs!</li>
+                      <li>Cooking!</li>
+                      <li>Being a foodie!</li>
+                    </ul>
+                  </p>
                 </div>
               </div>
             </VerticalTabContent>

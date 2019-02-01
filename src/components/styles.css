@@ -22,7 +22,11 @@ html, body {
   box-shadow: none;
 }
 
-li:hover {
+div.nav-wrapper > ul > li:hover {
+  background: rgba(0, 0, 0, 0.6);
+}
+
+ul.sidenav > li:hover {
   background: rgba(0, 0, 0, 0.6);
 }
 
