@@ -1,11 +1,11 @@
 import VerticalTabWrapper from "./verticaltabwrapper";
 import VerticalTabContent from "./verticaltabcontent";
-import VerticalTab from "./verticaltab";
-import Tab from "./tab";
+import VTabList from "./verticaltablist";
+import VTab from "./verticaltab";
 
 export {
   VerticalTabWrapper,
-  VerticalTab,
+  VTabList,
   VerticalTabContent,
-  Tab
+  VTab
 }

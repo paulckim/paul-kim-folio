@@ -1,8 +1,11 @@
 .dark-theme .card, 
 .dark-theme .card-content, 
 .dark-theme .card-action,
-.dark-theme .chip {
-  background: rgb(0, 0, 0, 0.2);
+.dark-theme .chip,
+.dark-theme ul.collection,
+.dark-theme li.collection-item
+{
+  background: rgb(0, 0, 0, 0.35);
   color: white;
 }
 
@@ -13,12 +16,14 @@
 }
 
 .about-card {
-  display: none;
-  line-height: -5%;
+  position: absolute;
+  transform: translateY(-5vh);
   margin: 0;
   padding: 0;
   height: 100%;
   width: 100%;
+  visibility: hidden;
+  opacity: 0;
 }
 
 .about-chips > * {
@@ -30,17 +35,24 @@
 }
 
 .active-card {
-  display: inline-block;
-  transform: translateY(-100%);
   animation: fadeInDown 0.75s 0ms forwards;
 }
 
 @keyframes fadeInDown {
-  from {
-    transform: translateY(-100%);
-    opacity: 0;
-  } to {
+  to {
     transform: translateY(0);
+    visibility: visible;
     opacity: 1;
   }
+}
+
+.div-split {
+  position: absolute;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
