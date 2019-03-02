@@ -16,44 +16,6 @@ html, body {
   height: 100vh;
 }
 
-.swiper-slide {
-  text-align: center;
-  font-size: 18px;
-  /* Center slide text vertically */
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  -webkit-align-items: center;
-  align-items: center;
-}
-
-.faded-layer-b {
-  height: 100%;
-  width: 100%;
-  position: static;
-  background: rgb(0, 0, 0, 0.4);
-}
-
-.faded-layer-w {
-  height: 100%;
-  width: 100%;
-  position: static;
-  background: rgb(255, 255, 255, 0.1);
-}
-
-.autoscale-img {
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-}
-
 .bullet {
   float: right;
   clear: right;

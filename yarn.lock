@@ -2520,6 +2520,11 @@ css-declaration-sorter@^4.0.1:
     postcss "^7.0.1"
     timsort "^0.3.0"
 
+css-fx@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/css-fx/-/css-fx-1.0.2.tgz#8be7e8c1359802081b8e21476501f338b68b9bca"
+  integrity sha512-CtWaiWW2qU7wN5cr2TawwnlOfuJYGuYws/xSaqy792HKhI9CB4mDyhEhJ0MtGUNqJgc7dnvpWdIpE/8RP+vkGA==
+
 css-loader@1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/css-loader/-/css-loader-1.0.0.tgz#9f46aaa5ca41dbe31860e3b62b8e23c42916bf56"

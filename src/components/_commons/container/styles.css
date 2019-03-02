@@ -1,0 +1,13 @@
+.container-style {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  align-items: stretch;
+  padding-top: 10%;
+  width: 85%;
+  margin: auto;
+}
+
+.container-style > * {
+  width: 100%;
+}

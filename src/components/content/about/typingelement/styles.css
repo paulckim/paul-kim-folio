@@ -1,0 +1,25 @@
+.cursor {
+  position: absolute;
+  background: white;
+  width: 13.5px;
+  min-height: 1em;
+}
+@keyframes blink {
+  0% {
+    animation-timing-function: steps(1, end);
+    opacity: 1;
+  }
+  50% {
+    animation-timing-function: steps(1, end);
+    opacity: 0;
+  }
+}
+
+@keyframes type {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}

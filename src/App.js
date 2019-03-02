@@ -2,20 +2,17 @@
  * @author Paul Cheor Kim
  * @fileoverview The root component that represents the portfolio website.
  */
-import React, { PureComponent } from 'react';
-import Swiper from "swiper";
-import { swiperConfig } from "./constants";
-import { NavBar } from "./components";
-import Section,
-{
-  SectionMetaData,
-  SectionNavMapper
-} from "./sections";
+import React, { PureComponent, Fragment } from 'react';
+import Swiper from 'swiper';
+import swiperConfig from './swiper.config';
+import {
+  Slide,
+  NavBar,
+  NavItem
+} from './components/_commons';
+import AboutSlide from './components/about.slide';
+import SlideMetaData from './components';
 import './index.css';
-
-function sectionRowMapper(sections) {
-  return sections.map(({index, imgUrl, component}) => Section(index, imgUrl, component));
-}
 
 class App extends PureComponent {
   componentDidMount() {
@@ -37,20 +34,44 @@ class App extends PureComponent {
   }
 
   render() {
-    const { sections, navLinks } = SectionNavMapper(SectionMetaData);
+    const { HOME, ABOUT, EXPERIENCE, SKILLS } = SlideMetaData;
     return (
-      <div>
-
+      <Fragment>
         <div className="swiper-container" id="swiper">
           <div className="swiper-wrapper">
-            {sectionRowMapper(sections)}
+            <Slide className='dark-theme' imgUrl={HOME.imgUrl} />
+            <AboutSlide />
+            <Slide className='dark-theme' imgUrl={EXPERIENCE.imgUrl} />
+            <Slide className='dark-theme' imgUrl={SKILLS.imgUrl} />
           </div>
           <div className="swiper-pagination" />
         </div>
-
-        <NavBar navLinks={navLinks} />
-
-      </div>
+        <NavBar 
+          logoText={HOME.navText} 
+          logoHandler={() => {
+            this._swiperInst.slideTo(0, swiperConfig.speed);
+          }}
+        >
+          <NavItem 
+            navText={ABOUT.navText}
+            onClick={() => {
+              this._swiperInst.slideTo(1, swiperConfig.speed);
+            }}
+          />
+          <NavItem 
+            navText={EXPERIENCE.navText}
+            onClick={() => {
+              this._swiperInst.slideTo(2, swiperConfig.speed);
+            }}
+          />
+          <NavItem 
+            navText={SKILLS.navText}
+            onClick={() => {
+              this._swiperInst.slideTo(3, swiperConfig.speed);
+            }}
+          />
+        </NavBar>
+      </Fragment>
     );
   }
 }
