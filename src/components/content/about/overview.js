@@ -27,16 +27,13 @@ export default class Overview extends PureComponent {
         <h3 className='center-align'>I am</h3>
         <h5 
           className='center-align' 
-          style={{
-            lineHeight: '1'
-          }}
+          style={{ lineHeight: '1' }}
         >
           <TypingElement  insertDelay={150} deleteDelay={5000} 
             typeInterval={50} blinkPeriod={1200} 
             texts={[
+              'A Cloud Software Engineer',
               'A Full Stack Engineer',
-              'A Cloud Engineer',
-              'A Software Engineer',
               'Passionate | Curious | Proud'
             ]}
           />
@@ -53,9 +50,7 @@ export default class Overview extends PureComponent {
               alt='At the Brooklyn Bridge'
             />
           </div>
-          <div className='v-content-col'
-            style={{ flex: 6 }}
-          >
+          <div className='v-content-col' style={{ flex: 6 }}>
             <div
               className='card z-depth-5'
               style={{ background: 'rgb(77, 56, 89)' }}

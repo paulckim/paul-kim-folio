@@ -17,7 +17,9 @@ export default class More extends PureComponent {
             style={{ flex: 7 }}
           >
             <p>To whom it may concern,</p>
-            <blockquote>
+            <blockquote
+              style={{ background: 'rgb(0, 0, 0, 0.4)' }}
+            >
               <p>
                 My name is Paul Kim and I am a cloud software engineer
                 <sup>

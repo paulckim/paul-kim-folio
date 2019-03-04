@@ -3,14 +3,11 @@
  * @fileoverview The root component that represents the portfolio website.
  */
 import React, { PureComponent, Fragment } from 'react';
-import Swiper from 'swiper';
 import swiperConfig from './swiper.config';
-import {
-  Slide,
-  NavBar,
-  NavItem
-} from './components/_commons';
+import Swiper from 'swiper';
+import { Slide, NavBar, NavItem } from './components/_commons';
 import AboutSlide from './components/about.slide';
+import ExperienceSlide from './components/experience.slide';
 import SlideMetaData from './components';
 import './index.css';
 
@@ -28,10 +25,6 @@ class App extends PureComponent {
     this._navInst.destroy();
     this._isMounted = false;
   }
-  
-  componentDidUpdate() {
-    this._swiperInst = new Swiper('#swiper', swiperConfig);
-  }
 
   render() {
     const { HOME, ABOUT, EXPERIENCE, SKILLS } = SlideMetaData;
@@ -41,7 +34,7 @@ class App extends PureComponent {
           <div className="swiper-wrapper">
             <Slide className='dark-theme' imgUrl={HOME.imgUrl} />
             <AboutSlide />
-            <Slide className='dark-theme' imgUrl={EXPERIENCE.imgUrl} />
+            <ExperienceSlide />
             <Slide className='dark-theme' imgUrl={SKILLS.imgUrl} />
           </div>
           <div className="swiper-pagination" />
