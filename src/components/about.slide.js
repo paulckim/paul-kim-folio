@@ -10,7 +10,7 @@ import {
 import Overview from './content/about/overview';
 import More from './content/about/more';
 import { fxFadeInDown } from 'css-fx/fade-in';
-import 'css-fx/css-fx.css';
+import 'css-fx/css-fx.min.css';
 
 const aboutImageUrl = 'https://archive-media-1.nyafuu.org/wg/image/1409/00/1409002784203.png';
 const SLIDE_IMAGE_URL = `url(${aboutImageUrl})`;

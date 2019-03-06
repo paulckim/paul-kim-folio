@@ -13,7 +13,6 @@ export default class ExperienceWrapper extends PureComponent {
         <div className='experience-content'>
           {this.props.children}
         </div>
-
       </div>
     );
   }
