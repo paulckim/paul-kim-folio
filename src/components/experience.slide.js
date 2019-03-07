@@ -90,16 +90,28 @@ export default class ExperienceSlide extends PureComponent {
         onBtnClick={() => this.setState({ isActive: false })}
       >
         <p>
-          I am a core developer of the License Delivery Service (LDS). LDS is backend, internal, subscription-based service that generates and encrypts licenses for Siemens software. These encrypted licenses are integrated into software products and specify which product features are enabled based on customer purchase.
+          I am a core developer of the License Delivery Service (LDS). LDS is a backend, subscription-based service that generates and encrypts licenses for Siemens software. These encrypted licenses are integrated into software products and specify which product features are enabled based on customer purchase.
         </p>
         <p>Responsible for developing and maintaining:</p>
         <ul className='browser-default'>
-          <li>RESTful api development using Java and Spring Boot</li>
-          <li>Unit, System & other end-to-end based testing using Junit, Python, Lua etc.</li>
-          <li>a internal, web application that allows authorized users to read api resources using React React-Router, Materialize CSS, Docker, Node, Express, Sinon, etc.</li>
-          <li>a internal, web application that generates and auto-fills api resources for authorized users using React, React-Router, Bootstrap, Docker, Node, Express, Sinon, etc.</li>
-          <li>the AWS infrastructure for different production levels (e.g. CloudFormation, API Gateway, Lambdas, ECS, Fargate, Datadog, PagerDuty, etc.)</li>
-          <li>a GitLab CI/ CD pipeline using shell scripts, etc.</li>
+          <li>
+            RESTful microservices using Java and Spring Boot
+          </li>
+          <li>
+            Unit, System & other end-to-end based testing using Junit, Python, Lua etc.
+          </li>
+          <li>
+            a internal, web application that allows authorized users to read api resources using React React-Router, Materialize CSS, Docker, Node, Express, Sinon, etc.
+          </li>
+          <li>
+            a internal, web application that generates and auto-fills api resources for authorized users using React, React-Router, Bootstrap, Docker, Node, Express, Sinon, etc.
+          </li>
+          <li>
+            the AWS infrastructure for different production levels (e.g. CloudFormation, API Gateway, Lambdas, ECS, Fargate, Datadog, PagerDuty, etc.)
+          </li>
+          <li>
+            a GitLab CI/ CD pipeline using shell scripts, etc.
+          </li>
         </ul>
       </ExperienceDetails>,
       <ExperienceDetails
@@ -111,13 +123,19 @@ export default class ExperienceSlide extends PureComponent {
         onBtnClick={() => this.setState({ isActive: false })}
       >
         <p>
-          I was a Software Engineering Intern on the Service-Oriented Infrastructure (SOA) Team.
+          I was a Software Engineering Intern on the Service-Oriented Infrastructure (SOA) Team. As an intern, I was responsible for reducing the amount of auto-generated SOA framework code/ binaries.
         </p>
-        <p>Responsible for developing and maintaining:</p>
+        <p>Successfully accomplished:</p>
         <ul className='browser-default'>
-          <li>XML Unmarshalling using Simple API for XML (SAX) Parsing and Java Reflection</li>
-          <li>Auto-generated Service-Oriented Architecture code reduction (~60%)</li>
-          <li>System and Integration Testing using JUnit</li>
+          <li>
+            Java api generation by XML Unmarshalling requests using Simple API for XML (SAX) Parsing and Java Reflection
+          </li>
+          <li>
+            Auto-generated Service-Oriented Architecture code reduction (~80%) while retaining runtime speed
+          </li>
+          <li>
+            System and Integration Testing using JUnit
+          </li>
         </ul>
       </ExperienceDetails>
     ][id];
@@ -129,6 +147,7 @@ export default class ExperienceSlide extends PureComponent {
 const SiemensLogo = (
   <img
     className='responsive-img'
+    style={{ maxWidth: '75%' }}
     src='https://infuser.eu/wp-content/uploads/2018/08/siemens-logo.png'
     alt='Siemens Logo'
   />
