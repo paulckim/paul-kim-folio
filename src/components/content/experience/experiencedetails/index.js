@@ -22,8 +22,8 @@ export default class ExperienceDetails extends PureComponent {
         >
           <i className='material-icons'>exit_to_app</i>Back
         </button>
-        <h4>{company}</h4>
-        <div>Position: {position}</div>
+        <h4>{position}</h4>
+        <div>Company: {company}</div>
         <div>Location: {location}</div>
         <div>Date: {date}</div>
         <div className='divider' />

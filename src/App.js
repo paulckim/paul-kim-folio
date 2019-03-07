@@ -8,6 +8,7 @@ import Swiper from 'swiper';
 import { Slide, NavBar, NavItem } from './components/_commons';
 import AboutSlide from './components/about.slide';
 import ExperienceSlide from './components/experience.slide';
+import SkillsSlide from './components/skills.slide';
 import SlideMetaData from './components';
 import './index.css';
 
@@ -35,7 +36,7 @@ class App extends PureComponent {
             <Slide className='dark-theme' imgUrl={HOME.imgUrl} />
             <AboutSlide />
             <ExperienceSlide />
-            <Slide className='dark-theme' imgUrl={SKILLS.imgUrl} />
+            <SkillsSlide />
           </div>
           <div className="swiper-pagination" />
         </div>

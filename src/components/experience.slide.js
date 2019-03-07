@@ -45,8 +45,8 @@ export default class ExperienceSlide extends PureComponent {
       <Fragment>
         <ExperienceCard 
           className={this.getAnimation()}
-          title='Siemens PLM Software'
           position='Cloud Software Engineer'
+          company='Siemens PLM Software'
           time='2017 - present'
           onBtnClick={() => {
             this.setState({
@@ -60,8 +60,8 @@ export default class ExperienceSlide extends PureComponent {
 
         <ExperienceCard 
           className={this.getAnimation()}
-          title='Siemens PLM Software'
           position='Software Engineering Intern'
+          company='Siemens PLM Software'
           time='2013 - 2017'
           onBtnClick={() => {
             this.setState({
@@ -83,8 +83,8 @@ export default class ExperienceSlide extends PureComponent {
     return [
       <ExperienceDetails
         className={this.getAnimation()}
-        company='Siemens PLM'
         position='Cloud Software Engineer'
+        company='Siemens PLM'
         location='California'
         date='2017 - Present'
         onBtnClick={() => this.setState({ isActive: false })}
@@ -116,8 +116,8 @@ export default class ExperienceSlide extends PureComponent {
       </ExperienceDetails>,
       <ExperienceDetails
         className={this.getAnimation()}
-        company='Siemens PLM'
         position='Software Engineering Intern'
+        company='Siemens PLM'
         location='California'
         date='2013 - 2017'
         onBtnClick={() => this.setState({ isActive: false })}

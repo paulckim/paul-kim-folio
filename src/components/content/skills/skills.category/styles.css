@@ -1,0 +1,16 @@
+.light-theme.circle,
+.light-theme.circle:hover
+{
+  background: rgb(255, 255, 255, 0.4);
+  color: black;
+}
+
+.circle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: calc(10px + 7.5rem);
+  height: calc(10px + 7.5rem);
+  border-radius: 50%;
+  font-weight: bold;
+}

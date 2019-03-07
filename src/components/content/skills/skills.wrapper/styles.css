@@ -1,0 +1,18 @@
+.dark-theme.skills-style {
+  background: rgb(0, 0, 0, 0.3);
+  color: white;
+}
+.skills-style {
+  display: flex;
+  flex-direction: column;
+  padding: 1vh 1vw 1vh 1vw;
+  min-height: calc(350px + 15rem);
+  max-height: 650px;
+}
+.skills-style > .skills-content {
+  display: flex;
+  flex: auto;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+}
