@@ -1,0 +1,35 @@
+.light-theme.skills-col-details > * {
+  background: rgb(255, 255, 255, 0.25);
+  color: black;
+}
+
+.skills-root-flex-row {
+  display: flex;
+  flex: auto;
+  align-items: stretch;
+}
+
+.skills-col-details {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.skills-centered-flex-row {
+  display: flex;
+  flex: auto;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-content: center;
+}
+.skills-col-categories {
+  display: flex;
+  flex-direction: column;
+  transition: all 0.75s;
+  width: 50%;
+}
+.skills-col-categories.expand {
+  width: 100%
+}
