@@ -4,6 +4,7 @@
  */
 import React, { PureComponent } from 'react';
 import { Slide, Container } from './_commons';
+import LanguageChart from './content/skills/charts/languages';
 import SkillsWrapper from './content/skills/wrapper';
 import SkillCategory from './content/skills/category';
 import SkillList from './content/skills/list';
@@ -59,32 +60,7 @@ export default class SkillsSlide extends PureComponent {
                   <h4>Programming Languages</h4>
                   <div className='divider' />
                   <p>A list of Programming languages that I am familiar with:</p>
-                  <ul>
-                    <li>
-                      Java:
-                      <div className='progress' style={{ width: '70%', color: 'black' }}>
-                        <span className='determinate' style={{ width: '65%' }} />
-                      </div>
-                    </li>
-                    <li>
-                      JavaScript:
-                      <div className='progress' style={{ width: '70%', color: 'black' }}>
-                        <span className='determinate' style={{ width: '75%' }} />
-                      </div>
-                    </li>
-                    <li>
-                      Python:
-                      <div className='progress' style={{ width: '70%', color: 'black' }}>
-                        <span className='determinate' style={{ width: '40%' }} />
-                      </div>
-                    </li>
-                    <li>
-                      C++:
-                      <div className='progress' style={{ width: '70%', color: 'black' }}>
-                        <span className='determinate' style={{ width: '40%' }} />
-                      </div>
-                    </li>
-                  </ul>
+                  <LanguageChart />
                 </SkillList>
                 <SkillList className={this.isVisible(1)}>
                   <h4>Development Tools</h4>
