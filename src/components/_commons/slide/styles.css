@@ -2,6 +2,10 @@
   background: rgb(0, 0, 0, 0.3);
   color: white;
 }
+.swiper-slide {
+  height: 100%;
+  width: 100%;
+}
 
 .autoscale-img {
   background-repeat: no-repeat;

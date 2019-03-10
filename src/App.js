@@ -18,6 +18,12 @@ class App extends PureComponent {
     const navElems = window.document.querySelectorAll('.sidenav');
     this._navInst = window.M.Sidenav.init(navElems);
     this._swiperInst = new Swiper("#swiper", swiperConfig);
+
+    // landscape = window.orientation == 90 || window.orientation == -90
+    // window.orientation == 90
+    // window.addEventListener('orientationchange', event => {
+    //   //
+    // });
   }
 
   componentWilUnmount() {
@@ -31,14 +37,14 @@ class App extends PureComponent {
     const { HOME, ABOUT, EXPERIENCE, SKILLS } = SlideMetaData;
     return (
       <Fragment>
-        <div className="swiper-container" id="swiper">
-          <div className="swiper-wrapper">
+        <div className='swiper-container' id='swiper'>
+          <div className='swiper-wrapper'>
             <Slide className='dark-theme' imgUrl={HOME.imgUrl} />
             <AboutSlide />
             <ExperienceSlide />
             <SkillsSlide />
           </div>
-          <div className="swiper-pagination" />
+          <div className='swiper-pagination' />
         </div>
         <NavBar 
           logoText={HOME.navText} 
