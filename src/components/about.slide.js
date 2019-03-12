@@ -2,84 +2,100 @@
  * @author Paul Cheor Kim
  * @fileoverview The HTML content that represents the About Me section of the portfolio.
  */
-import React, { PureComponent } from 'react';
-import {
-  Slide, Container, 
-  VerticalTabWrapper, VerticalTabContent, VTabList, VTab
-} from './_commons';
-import Overview from './content/about/overview';
-import More from './content/about/more';
-import { fxFadeInDown } from 'css-fx/fade-in';
-import 'css-fx/css-fx.min.css';
-
-const aboutImageUrl = 'https://archive-media-1.nyafuu.org/wg/image/1409/00/1409002784203.png';
-const SLIDE_IMAGE_URL = `url(${aboutImageUrl})`;
-const _TAB_LITERALS = Object.freeze([ 'Overview', 'Learn More...' ]);
-const _TAB_IDS = Object.freeze({ OVERVIEW: 0, MORE: 1 });
-
-/**
- * 
- * @param {number} id 
- */
-const getTabLabels = id => _TAB_LITERALS[id];
+import React, { PureComponent, Fragment } from 'react';
+import Swiper from 'swiper';
+import { TypingElement } from './_commons';
+import OverviewSlide from './content/about/overview';
+import MoreSlide from './content/about/more';
+import './content/about/styles.css';
 
 export default class AboutSlide extends PureComponent {
   constructor(props) {
     super(props);
-    this.state = { currTab: _TAB_IDS.OVERVIEW };
-    this.setTab = this.setTab.bind(this);
-    this.getTabStyle = this.getTabStyle.bind(this);
-    this.getCardStyle = this.getCardStyle.bind(this);
+    this.state = {
+      chevronLeftClass: 'disabled',
+      chevronRightClass: 'pulse'
+    }
+    this._aboutSlideRef = React.createRef();
+    this._chevronLeftRef = React.createRef();
+    this._chevronRightRef = React.createRef();
+    this.updateChevronClasses = this.updateChevronClasses.bind(this);
+  }
+
+  updateChevronClasses() {
+    const { length } = this._aboutSlidesInst.slides;
+    const { activeIndex } = this._aboutSlidesInst;
+    this.setState({
+      chevronLeftClass: activeIndex !== 0 ? 'pulse' : 'disabled',
+      chevronRightClass: activeIndex !== (length - 1) ? 'pulse' : 'disabled'
+    });
+  }
+
+  componentDidMount() {
+    this._isMounted = true;
+    this._aboutSlidesInst = new Swiper(this._aboutSlideRef.current, {
+      navigation: {
+        prevEl: this._chevronLeftRef.current,
+        nextEl: this._chevronRightRef.current,
+        // disabledClass: 'disabled'
+      }
+    });
+    this._aboutSlidesInst.on('slideChange', this.updateChevronClasses);
+    this.updateChevronClasses();
+  }
+
+  componentWillUnmount() {
+    if(!this._isMounted) return;
+    this._aboutSlidesInst.destroy();
+    this._isMounted = false;
   }
 
   render() {
+    const { chevronLeftClass, chevronRightClass } = this.state;
     return (
-      <Slide className='dark-theme' imgUrl={SLIDE_IMAGE_URL}>
-        <Container>
-          <VerticalTabWrapper>
-            <VTabList>
-              <VTab 
-                className={this.getTabStyle(_TAB_IDS.OVERVIEW)} 
-                icon="account_box" tabLabel={getTabLabels(_TAB_IDS.OVERVIEW)} 
-                onClick={() => this.setTab(_TAB_IDS.OVERVIEW)} 
-              />
-              <VTab 
-                className={this.getTabStyle(_TAB_IDS.MORE)} 
-                icon="account_box" tabLabel={getTabLabels(_TAB_IDS.MORE)} 
-                onClick={() => this.setTab(_TAB_IDS.MORE)} 
-              />
-            </VTabList>
-            <VerticalTabContent>
-              <Overview className={`dark-theme ${this.getCardStyle(_TAB_IDS.OVERVIEW)}`} />
-              <More className={`dark-theme ${this.getCardStyle(_TAB_IDS.MORE)}`} />
-            </VerticalTabContent>
-          </VerticalTabWrapper>
-        </Container>
-      </Slide>
+      <Fragment>
+        <h2 className='center-align'>About Me</h2>
+        <h5 
+          className='center-align' style={{ lineHeight: '1', minHeight: '1em' }}
+        >
+          <TypingElement 
+            insertDelay={150} deleteDelay={4000} 
+            typeInterval={40} blinkPeriod={1200} 
+            texts={[
+              'A Cloud Software Engineer',
+              'A Full Stack Engineer',
+              'Passionate | Curious | Proud'
+            ]}
+          />
+        </h5>
+        <div className='divider' style={{marginBottom: '10px'}} />
+        
+        <div ref={this._aboutSlideRef} className='swiper-container'>
+
+          <div className='swiper-wrapper'>
+            <div className='swiper-slide about-slide'>
+              <OverviewSlide />
+            </div>
+            <div className='swiper-slide about-slide'>
+              <MoreSlide />
+            </div>
+          </div>
+          
+          <div 
+            ref={this._chevronLeftRef} 
+            className={`btn-floating chevron_left ${chevronLeftClass}`}
+          >
+            <i className='medium material-icons'>chevron_left</i>
+          </div>
+          <div 
+            ref={this._chevronRightRef} 
+            className={`btn-floating chevron_right ${chevronRightClass}`}
+          >
+            <i className='medium material-icons'>chevron_right</i>
+          </div>
+        </div>
+        
+      </Fragment>
     );
-  }
-
-  /**
-   * 
-   * @param {number} tabId 
-   */
-  setTab(tabId) {
-    if(this.state.currTab !== tabId) this.setState({ currTab: tabId });
-  }
-
-  /**
-   * 
-   * @param {number} isActtabIdive 
-   */
-  getTabStyle(tabId) {
-    return this.state.currTab === tabId ? 'vtab-active' : '';
-  }
-
-  /**
-   * 
-   * @param {number} tabId 
-   */
-  getCardStyle(tabId) {
-    return this.state.currTab === tabId ? `reveal ${fxFadeInDown}` : '';
   }
 }

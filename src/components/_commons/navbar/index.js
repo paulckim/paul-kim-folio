@@ -2,26 +2,47 @@ import React, { PureComponent } from 'react';
 import './styles.css';
 
 export default class NavBar extends PureComponent {
+  constructor(props) {
+    super(props);
+    this._sideNavRef = React.createRef();
+  }
+
+  componentDidMount() {
+    this._isMounted = true;
+    this._sideNavInst = window.M.Sidenav.init(this._sideNavRef.current);
+  }
+
+  componentWillUnmount() {
+    if(!this._isMounted) return;
+    this._sideNavInst.destroy();
+    this._isMounted = false;
+  }
+  
   render() {
-    const { logoText, logoHandler } = this.props;
+    const { className, logoText } = this.props;
+    const styles = ['navbar-fixed'];
+    if(className) styles.push(className);
     return (
-      <div>
-        <nav className='floating-nav nav-dark'>
+      <div className={styles.join(' ')}>
+        <nav>
           <div className='nav-wrapper'>
-            <span
-              className='waves-effect waves-light brand-logo center'
-              onClick={logoHandler}>
+            {/* eslint-disable-next-line */}
+            <a 
+              className='waves-effect waves-light brand-logo center' 
+              href='#'
+            >
               {logoText}
-            </span>
-            <a href="#!" data-target='mobile-nav' className='sidenav-trigger'>
-              <i className='material-icons'>menu</i>
             </a>
+            {/* eslint-disable-next-line */}
+            <span data-target='mobile-nav' className='sidenav-trigger'>
+              <i className='material-icons'>menu</i>
+            </span>
             <ul className='right hide-on-med-and-down'>
               {this.props.children}
             </ul>
           </div>
         </nav>
-        <ul className='sidenav sidenav-dark' id='mobile-nav'>
+        <ul ref={this._sideNavRef} className='sidenav' id='mobile-nav'>
           {this.props.children}
         </ul>
       </div>

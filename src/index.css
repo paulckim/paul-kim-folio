@@ -1,34 +1,6 @@
 html, body {
   position: relative;
+  scroll-behavior: smooth;
   height: 100%;
   margin: 0;
-}
-
-.swiper-container {
-  position: absolute;
-  max-height: 100vh;
-  height: 100%;
-  width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.bullet {
-  float: right;
-  clear: right;
-  cursor: pointer;
-  margin-top: 9px;
-  margin-bottom: 9px;
-  display: block;
-  background: white;
-  opacity: .5;
-  border-radius: 0%;
-  width: 35px;
-  height: 8px;
-  transition-property: width;
-  transition-duration: .25s;
-}
-
-.active {
-  width: 80px;
 }

@@ -3,68 +3,61 @@
  * @fileoverview The root component that represents the portfolio website.
  */
 import React, { PureComponent, Fragment } from 'react';
-import swiperConfig from './swiper.config';
-import Swiper from 'swiper';
-import { Slide, NavBar, NavItem } from './components/_commons';
+import { NavBar, NavItem, Parallax, ParallaxSection } from './components/_commons'; 
 import AboutSlide from './components/about.slide';
-import ExperienceSlide from './components/experience.slide';
-import SkillsSlide from './components/skills.slide';
+// eslint-disable-next-line
 import SlideMetaData from './components';
 import './index.css';
 
 class App extends PureComponent {
-  componentDidMount() {
-    this._isMounted = true;
-    const navElems = window.document.querySelectorAll('.sidenav');
-    this._navInst = window.M.Sidenav.init(navElems);
-    this._swiperInst = new Swiper("#swiper", swiperConfig);
-  }
-
-  componentWilUnmount() {
-    if(!this._isMounted) return;
-    this._swiperInst.destroy();
-    this._navInst.destroy();
-    this._isMounted = false;
-  }
-
   render() {
+    // eslint-disable-next-line
     const { HOME, ABOUT, EXPERIENCE, SKILLS } = SlideMetaData;
     return (
       <Fragment>
-        <div className="swiper-container" id="swiper">
-          <div className="swiper-wrapper">
-            <Slide className='dark-theme' imgUrl={HOME.imgUrl} />
-            <AboutSlide />
-            <ExperienceSlide />
-            <SkillsSlide />
-          </div>
-          <div className="swiper-pagination" />
-        </div>
-        <NavBar 
-          logoText={HOME.navText} 
-          logoHandler={() => {
-            this._swiperInst.slideTo(0, swiperConfig.speed);
-          }}
-        >
-          <NavItem 
-            navText={ABOUT.navText}
-            onClick={() => {
-              this._swiperInst.slideTo(1, swiperConfig.speed);
-            }}
-          />
-          <NavItem 
-            navText={EXPERIENCE.navText}
-            onClick={() => {
-              this._swiperInst.slideTo(2, swiperConfig.speed);
-            }}
-          />
-          <NavItem 
-            navText={SKILLS.navText}
-            onClick={() => {
-              this._swiperInst.slideTo(3, swiperConfig.speed);
-            }}
-          />
+
+        <NavBar className='dark-theme' logoText='Paul 철 Kim'>
+          <NavItem targetId='#about'>About</NavItem>
+          <NavItem targetId='#experience'>Experience</NavItem>
+          <NavItem targetId='#skills'>Skills</NavItem>
         </NavBar>
+
+        <scroll-container>
+          <Parallax src='https://i.imgur.com/jdBlxYT.jpg'/>
+          <ParallaxSection className='dark-theme'>
+            <h2>Home!</h2>
+            <p>Landing page section!</p>
+          </ParallaxSection>
+
+          <Parallax 
+            src='https://archive-media-1.nyafuu.org/wg/image/1409/00/1409002784203.png' 
+          />
+          <scroll-page id='about'>
+            <ParallaxSection className='dark-theme'>
+              <AboutSlide />
+            </ParallaxSection>
+          </scroll-page>
+
+          <Parallax 
+            src='https://orig00.deviantart.net/08d8/f/2015/303/b/1/everest_polyscape_by_kermitnirmit-d9eyroo.jpg' 
+          />
+          <scroll-page id='experience'>
+            <ParallaxSection className='dark-theme'>
+              <h2>Experience!</h2>
+              <p>Experience page section!</p>
+            </ParallaxSection>
+          </scroll-page>
+
+          <scroll-page id='skills'>
+            <Parallax src='https://i.imgur.com/ZmU1Hro.png'/>
+            <ParallaxSection className='dark-theme'>
+              <h2>Skills!</h2>
+              <p>Skills page section!</p>
+            </ParallaxSection>
+          </scroll-page>
+
+        </scroll-container>
+
       </Fragment>
     );
   }

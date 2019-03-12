@@ -2,10 +2,10 @@ import React, { PureComponent } from 'react';
 
 export default class NavItem extends PureComponent {
   render() {
-    const { onClick, navText } = this.props;
+    const { targetId } = this.props;
     return (
-      <li className='waves-effect waves-light' onClick={onClick}>
-        <span>{navText}</span>
+      <li className='waves-effect waves-light'>
+        <a href={targetId}>{this.props.children}</a>
       </li>
     );
   }

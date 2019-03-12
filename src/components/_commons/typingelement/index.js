@@ -79,7 +79,7 @@ export default class TypingElement extends PureComponent {
   render() {
     return (
       <Fragment>
-        <span ref={this._textRef} />
+        <span ref={this._textRef} style={{ minHeight: '1em' }}/>
         <span 
           className={`cursor`} 
           style={this._getCursorStyle()} 
