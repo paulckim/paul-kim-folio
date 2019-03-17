@@ -10,6 +10,7 @@ import VTabList from './verticaltablist';
 import VTab from './verticaltab';
 import TypingElement from './typingelement';
 import SplitCard from './splitcard';
+import FlipCard, { FrontCard, BackCard } from './flipcard'
 
 export {
   NavBar,
@@ -23,5 +24,8 @@ export {
   VTab,
   VerticalTabContent,
   TypingElement,
+  FlipCard,
+  FrontCard,
+  BackCard,
   SplitCard
 }

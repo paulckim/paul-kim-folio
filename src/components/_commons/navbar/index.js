@@ -4,12 +4,15 @@ import './styles.css';
 export default class NavBar extends PureComponent {
   constructor(props) {
     super(props);
+    this._navRef = React.createRef();
     this._sideNavRef = React.createRef();
   }
 
   componentDidMount() {
     this._isMounted = true;
-    this._sideNavInst = window.M.Sidenav.init(this._sideNavRef.current);
+    this._sideNavInst = window.M.Sidenav.init(
+      this._sideNavRef.current
+    );
   }
 
   componentWillUnmount() {
@@ -19,11 +22,11 @@ export default class NavBar extends PureComponent {
   }
   
   render() {
-    const { className, logoText } = this.props;
+    const { className, logoText, ...rest } = this.props;
     const styles = ['navbar-fixed'];
     if(className) styles.push(className);
     return (
-      <div className={styles.join(' ')}>
+      <div ref={this._navRef} className={styles.join(' ')} {...rest}>
         <nav>
           <div className='nav-wrapper'>
             {/* eslint-disable-next-line */}
@@ -33,7 +36,6 @@ export default class NavBar extends PureComponent {
             >
               {logoText}
             </a>
-            {/* eslint-disable-next-line */}
             <span data-target='mobile-nav' className='sidenav-trigger'>
               <i className='material-icons'>menu</i>
             </span>

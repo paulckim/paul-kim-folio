@@ -1,5 +1,3 @@
-div.dark-theme.navbar-fixed { background: rgb(0, 0, 0, 0.9); }
-/* rgb(77, 56, 89); */
 div.dark-theme > ul.sidenav,
 div.dark-theme > nav {
   background-color: transparent;
@@ -12,9 +10,12 @@ div.dark-theme > nav a:hover,
 div.dark-theme > ul.sidenav a:hover {
   background: rgba(0, 0, 0, 0.4);
 }
+div.navbar-fixed {
+  position: absolute;
+}
 ul.sidenav > li { width: 100%; }
-nav > div.nav-wrapper > a.brand-logo, 
-span.sidenav-trigger {
+nav > .nav-wrapper > .brand-logo, 
+nav > .nav-wrapper > .sidenav-trigger {
   cursor: pointer;
 }
 .sidenav-overlay {

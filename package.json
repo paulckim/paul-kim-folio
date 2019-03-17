@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "css-fx": "^1.0.2",
+    "highcharts": "^7.0.3",
     "materialize-css": "^1.0.0-rc.2",
     "react": "^16.6.3",
     "react-dom": "^16.6.3",

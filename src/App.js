@@ -5,6 +5,7 @@
 import React, { PureComponent, Fragment } from 'react';
 import { NavBar, NavItem, Parallax, ParallaxSection } from './components/_commons'; 
 import AboutSlide from './components/about.slide';
+import ExperienceSlide from './components/experience.slide';
 // eslint-disable-next-line
 import SlideMetaData from './components';
 import './index.css';
@@ -20,39 +21,55 @@ class App extends PureComponent {
           <NavItem targetId='#about'>About</NavItem>
           <NavItem targetId='#experience'>Experience</NavItem>
           <NavItem targetId='#skills'>Skills</NavItem>
+          <NavItem targetId='#contact'>Contact</NavItem>
         </NavBar>
 
         <scroll-container>
-          <Parallax src='https://i.imgur.com/jdBlxYT.jpg'/>
-          <ParallaxSection className='dark-theme'>
-            <h2>Home!</h2>
-            <p>Landing page section!</p>
-          </ParallaxSection>
 
-          <Parallax 
-            src='https://archive-media-1.nyafuu.org/wg/image/1409/00/1409002784203.png' 
-          />
+          <div 
+            style={{
+              position:'static',
+              width: '100%',
+              height: '100%'
+            }}
+          >
+            <div 
+              style={{
+                position:'absolute',
+                background: 'rgb(0, 0, 0, 0.4)'
+              }}>
+                {/* Add floating animation here */}
+              </div>
+            <Parallax
+              src='https://archive-media-1.nyafuu.org/wg/image/1409/00/1409002784203.png' 
+            />
+          </div>
           <scroll-page id='about'>
             <ParallaxSection className='dark-theme'>
               <AboutSlide />
             </ParallaxSection>
           </scroll-page>
 
-          <Parallax 
-            src='https://orig00.deviantart.net/08d8/f/2015/303/b/1/everest_polyscape_by_kermitnirmit-d9eyroo.jpg' 
-          />
+          <Parallax src='https://i.imgur.com/ZmU1Hro.png' />
           <scroll-page id='experience'>
             <ParallaxSection className='dark-theme'>
-              <h2>Experience!</h2>
-              <p>Experience page section!</p>
+              <ExperienceSlide />
             </ParallaxSection>
           </scroll-page>
 
+          <Parallax src='https://orig00.deviantart.net/08d8/f/2015/303/b/1/everest_polyscape_by_kermitnirmit-d9eyroo.jpg'/>
           <scroll-page id='skills'>
-            <Parallax src='https://i.imgur.com/ZmU1Hro.png'/>
             <ParallaxSection className='dark-theme'>
               <h2>Skills!</h2>
               <p>Skills page section!</p>
+            </ParallaxSection>
+          </scroll-page>
+
+          <Parallax src='https://i.imgur.com/jdBlxYT.jpg'/>
+          <scroll-page id='contact'>
+            <ParallaxSection className='dark-theme'>
+              <h2>Contact</h2>
+              <p>Landing page section!</p>
             </ParallaxSection>
           </scroll-page>
 

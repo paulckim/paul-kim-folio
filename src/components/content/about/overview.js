@@ -50,17 +50,17 @@ class Degree extends PureComponent {
       <Fragment>
         <div className='row' style={{ marginBottom: '0' }}>
           <div className='col s3'>{this.props.year}</div>
-          <div className='col s3'>Major:</div>
+          <div className='col s2'>Major:</div>
           <div className='col s6'>{this.props.major}</div>
         </div>
 
         <div className='row' style={{ marginBottom: '0' }}>
-          <div className='col s3 offset-s3'>Degree:</div>
+          <div className='col s2 offset-s3'>Degree:</div>
           <div className='col s6'>{this.props.degree}</div>
         </div>
 
         <div className='row' style={{ marginBottom: '0' }}>
-          <div className='col s3 offset-s3'>GPA:</div>
+          <div className='col s2 offset-s3'>GPA:</div>
           <div className='col s6'>{this.props.gpa}</div>
         </div>
       </Fragment>

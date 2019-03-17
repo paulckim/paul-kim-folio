@@ -36,8 +36,7 @@ export default class AboutSlide extends PureComponent {
     this._aboutSlidesInst = new Swiper(this._aboutSlideRef.current, {
       navigation: {
         prevEl: this._chevronLeftRef.current,
-        nextEl: this._chevronRightRef.current,
-        // disabledClass: 'disabled'
+        nextEl: this._chevronRightRef.current
       }
     });
     this._aboutSlidesInst.on('slideChange', this.updateChevronClasses);
