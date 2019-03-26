@@ -6,12 +6,15 @@ import React, { PureComponent, Fragment } from 'react';
 import { NavBar, NavItem, Parallax, ParallaxSection } from './components/_commons'; 
 import AboutSlide from './components/about.slide';
 import ExperienceSlide from './components/experience.slide';
+import SkillsSlide from './components/skills.slide';
+// TODO: remove useless imports if necessary
 // eslint-disable-next-line
 import SlideMetaData from './components';
 import './index.css';
 
 class App extends PureComponent {
   render() {
+    // TODO: remove useless metadata if necessary
     // eslint-disable-next-line
     const { HOME, ABOUT, EXPERIENCE, SKILLS } = SlideMetaData;
     return (
@@ -60,8 +63,7 @@ class App extends PureComponent {
           <Parallax src='https://orig00.deviantart.net/08d8/f/2015/303/b/1/everest_polyscape_by_kermitnirmit-d9eyroo.jpg'/>
           <scroll-page id='skills'>
             <ParallaxSection className='dark-theme'>
-              <h2>Skills!</h2>
-              <p>Skills page section!</p>
+              <SkillsSlide />
             </ParallaxSection>
           </scroll-page>
 
