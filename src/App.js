@@ -7,6 +7,7 @@ import { NavBar, NavItem, Parallax, ParallaxSection } from './components/_common
 import AboutSlide from './components/about.slide';
 import ExperienceSlide from './components/experience.slide';
 import SkillsSlide from './components/skills.slide';
+import SocialSection from './components/social.slide';
 // TODO: remove useless imports if necessary
 // eslint-disable-next-line
 import SlideMetaData from './components';
@@ -24,7 +25,7 @@ class App extends PureComponent {
           <NavItem targetId='#about'>About</NavItem>
           <NavItem targetId='#experience'>Experience</NavItem>
           <NavItem targetId='#skills'>Skills</NavItem>
-          <NavItem targetId='#contact'>Contact</NavItem>
+          <NavItem targetId='#social'>Social</NavItem>
         </NavBar>
 
         <scroll-container>
@@ -68,10 +69,9 @@ class App extends PureComponent {
           </scroll-page>
 
           <Parallax src='https://i.imgur.com/jdBlxYT.jpg'/>
-          <scroll-page id='contact'>
+          <scroll-page id='social'>
             <ParallaxSection className='dark-theme'>
-              <h2>Contact</h2>
-              <p>Landing page section!</p>
+              <SocialSection />
             </ParallaxSection>
           </scroll-page>
 

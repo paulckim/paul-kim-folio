@@ -26,7 +26,7 @@ export default class ExperienceCard extends PureComponent {
     const { isActive } = this.state;
     const activeClass = isActive ? 'active' : '';
     const activePanelStyle = isActive 
-      ? 'rgb(223, 113, 73, 0.65)' 
+      ? 'rgb(223, 113, 73, 0.85)' 
       : 'rgb(0, 0, 0, 0.75)';
     const activeContentStyle = isActive ? '' : 'none';
     return (
