@@ -8,16 +8,10 @@ import AboutSlide from './components/about.slide';
 import ExperienceSlide from './components/experience.slide';
 import SkillsSlide from './components/skills.slide';
 import SocialSection from './components/social.slide';
-// TODO: remove useless imports if necessary
-// eslint-disable-next-line
-import SlideMetaData from './components';
 import './index.css';
 
 class App extends PureComponent {
   render() {
-    // TODO: remove useless metadata if necessary
-    // eslint-disable-next-line
-    const { HOME, ABOUT, EXPERIENCE, SKILLS } = SlideMetaData;
     return (
       <Fragment>
 
@@ -42,7 +36,7 @@ class App extends PureComponent {
                 position:'absolute',
                 background: 'rgb(0, 0, 0, 0.4)'
               }}>
-                {/* Add floating animation here */}
+                {/* TODO: Add floating animation here */}
               </div>
             <Parallax
               src='https://archive-media-1.nyafuu.org/wg/image/1409/00/1409002784203.png' 
@@ -61,7 +55,9 @@ class App extends PureComponent {
             </ParallaxSection>
           </scroll-page>
 
-          <Parallax src='https://orig00.deviantart.net/08d8/f/2015/303/b/1/everest_polyscape_by_kermitnirmit-d9eyroo.jpg'/>
+          <Parallax 
+            src='https://orig00.deviantart.net/08d8/f/2015/303/b/1/everest_polyscape_by_kermitnirmit-d9eyroo.jpg'
+          />
           <scroll-page id='skills'>
             <ParallaxSection className='dark-theme'>
               <SkillsSlide />
