@@ -37,7 +37,7 @@ export default class MoreSlide extends PureComponent {
             style={{ maxHeight: 'calc(100px + 10vh)', overflowY: 'scroll' }}
           >
             <p>
-              My name is Paul Kim and I am a cloud software engineer
+              My name is Paul Kim, and I am a cloud software engineer
               <sup>
                 <i 
                   ref={this._tooltipRef}
@@ -52,28 +52,16 @@ export default class MoreSlide extends PureComponent {
                 >
                   priority_high
                 </i>
-              </sup> who loves 
-              dabbling in all parts of the development cycle. Passion, curiousity 
-              and pride are all traits that define who I am. Learning <i>how </i> 
-              to do things is never enough to satisfy my endless curiousity. I 
-              am the type of person that needs to know why things work the way 
-              they do and why things are the way they are. Often times, I find 
-              myself staying up all night just to understand why engineers made 
-              or make certain decisions that mold the current state of open-source 
-              communities and technologies. Understanding not only quenches my 
-              insatiable thirst to learn, but also instills me with the wisdom 
-              and knowledge to become a better engineer.
+              </sup> who loves to engage in every part of the development cycle. Curious, passionate, and proud are all traits that define who I am.
             </p>
             <p>
-              Although I am young, my passion for software enables me to present 
-              the best solutions I can possibly offer by relentlessly revising 
-              and questioning of my own work. I like to argue out loud with 
-              myself before bringing my thoughts and opinions to others. I do 
-              this - besides ocd and habit - to improve my thought process, 
-              produce better arguments and become a more confident individual. 
-              I believe that pride is the first and most important step to 
-              producing quality work and that actions in life are meaningless 
-              if there is no reasoning.
+              Learning how to do things is never enough to satisfy my endless curiousity. I am the type of person who needs to know why things work the way they do, and why things are the way they are. I devote much of my time to learning and understanding the decisions made to mold our current state of open-source communities and technologies. I'll spend endless hours tinkering on personal projects, and reading a myriad of educational articles and books.
+            </p>
+            <p>
+              My passion for software drives me to present the best solutions possible. I am thorough in the design process, relentlessly questioning and revising my own work before presenting it to others. Sometimes, I can't help but even debate with myself out loud! Odd habits like this allow me to formulate successful arguments and become a more confident individual.
+            </p>
+            <p>
+              I believe that one should always take pride in their work, with a purpose-driven mindset to achieve quality end-products.
             </p>
           </blockquote>
           

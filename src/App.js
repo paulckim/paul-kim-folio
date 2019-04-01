@@ -39,7 +39,7 @@ class App extends PureComponent {
                 {/* TODO: Add floating animation here */}
               </div>
             <Parallax
-              src='https://archive-media-1.nyafuu.org/wg/image/1409/00/1409002784203.png' 
+              src='https://images5.alphacoders.com/523/523514.png' 
             />
           </div>
           <scroll-page id='about'>
@@ -64,7 +64,7 @@ class App extends PureComponent {
             </ParallaxSection>
           </scroll-page>
 
-          <Parallax src='https://i.imgur.com/jdBlxYT.jpg'/>
+          <Parallax src='https://images3.alphacoders.com/828/828895.jpg'/>
           <scroll-page id='social'>
             <ParallaxSection className='dark-theme'>
               <SocialSection />
