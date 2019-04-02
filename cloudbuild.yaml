@@ -1,0 +1,29 @@
+steps:
+# Pull Git project
+- name: 'gcr.io/cloud-builders/git'
+  args: ['clone', 'https://github.com/paulckim/paul-kim-folio']
+  env: ['PROJECT_ROOT=app']
+# Check Node Version
+- name: 'node:alpine'
+  entrypoint: node
+  args: ['--version']
+# Check Yarn Version
+- name: 'node:alpine'
+  entrypoint: yarn
+  args: ['--version']
+# Install dependencies
+- name: 'node:alpine'
+  entrypoint: yarn
+  args: ['run', 'prod-install']
+# Build React App
+- name: 'node:alpine'
+  entrypoint: yarn
+  args: ['build']
+# Clean GCS
+- name: 'gcr.io/cloud-builders/gsutil'
+  entrypoint: '/bin/bash'
+  args: ['-c', 'rm gs://www.paulckim.com/** || true']
+# Upload new static files to GCS
+- name: 'gcr.io/cloud-builders/gsutil'
+  dir: build
+  args: ['cp', '-r', '.', 'gs://www.paulckim.com']
